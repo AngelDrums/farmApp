@@ -34,6 +34,11 @@ function crearCard(arrayMedicamentos) {
 
     if (mostrarOcultar) {
         agregarAlCarrito.onclick = () => {
+            Swal.fire({
+                title: "Eliminado",
+                text: `Se elimino ${arrayMedicamentos.nombre} del carrito`,
+                icon: "warning"
+            });
             eliminarDelCarrito(arrayMedicamentos.nombre);
         };
     } else {
